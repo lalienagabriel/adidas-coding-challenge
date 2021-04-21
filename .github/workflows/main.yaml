@@ -10,7 +10,7 @@ jobs:
           java-version: "8"
           distribution: adopt
       - name: Build jar
-        run: ./mvnw package
+        run: mvn package
       - name: Build image
         run: docker build --file dockerfile --tag lalienagabriel/hello-world .
       - name: Push to Docker Hub
