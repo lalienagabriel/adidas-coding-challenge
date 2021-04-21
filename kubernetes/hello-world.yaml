@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hello-world
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: hello-world
+      labels:
+        k8s-app: hello-world
+    spec:
+      containers:
+        - name: hello-world
+          image: lalienagabriel/hello-world:latest
+	  ports:
+	- containerPort:8080
+          imagePullPolicy: Always
