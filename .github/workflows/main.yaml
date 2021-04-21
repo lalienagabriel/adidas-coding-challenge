@@ -1,6 +1,5 @@
 name: docker-hub
-on:
-  push: ["branches"]
+on: [push]
 jobs:
   push:
     runs-on: ubuntu-latest
