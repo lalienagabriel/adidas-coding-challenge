@@ -183,3 +183,8 @@ To see grafana we´ll need to use kubernetes proxy to expose it outside of the s
 ```bash
 minikube kubectl proxy
 ```
+Also we can check the logs and status of the service in order to check what is the failure
+```bash
+minikube kubectl -- logs hello-world-78f684cbb9-cqzh6
+minikube kubectl -- get services
+```
