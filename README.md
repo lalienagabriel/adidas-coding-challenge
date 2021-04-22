@@ -48,7 +48,7 @@ COPY target/hello-world-0.0.1-SNAPSHOT.jar hello-world.jar #jar file to add to t
 ENTRYPOINT ["java","-jar","/hello-world.jar"] #execution line for the container
 ```
 To test the container we´re going to build it
-```docker
+```bash
 docker build --tag=hello-world:latest . #build the container with all the files in the current directory
 docker run -p8080:8080 hello-world:latest #run the container mapping the port 8080 of our server to the port 8080 in the container
 ```
